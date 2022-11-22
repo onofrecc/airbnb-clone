@@ -1,0 +1,18 @@
+<h1>All our flats (<%= @flats.length %>)</h1>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-4 card mx-3 my-3 bg-light" style="width: 18rem;">
+      <div class="card-body bg-light">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= flat.location %></h6>
+        <div class="row">
+          <p class="col card-text"><i class="col fa-solid fa-user-group"></i> <%= flat.rating %></p>
+          <p class="col card-text"><i class="col fa-solid fa-euro-sign"></i> <%= flat.price %></p>
+        </div>
+        <%# <%= link_to 'More info', flat_path(flat), class: "card-link .link-primary", style: "text-decoration: none" %>
+        <%# <%= link_to 'Edit', edit_flat_path(flat), class: "card-link link-warning", style: "text-decoration: none" %> %>
+        <%# <%= link_to 'Remove', flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-link link-danger", style: "text-decoration: none" %> %> %>
+      </div>
+    </div>
+  <% end %>
+</div>
