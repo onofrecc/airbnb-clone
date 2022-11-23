@@ -5,6 +5,11 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
+  def show
+    @flat = Flat.find(params[:id])
+    @booking = Booking.new
+  end
+
   def new
     @flat = Flat.new
   end
