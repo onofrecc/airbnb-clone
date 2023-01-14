@@ -1,4 +1,9 @@
 <%# MAP %>
+<div style="width: 100%; height: 600px;"
+  data-controller="mapindividual"
+  data-individualmap-markers-value="<%= @marker.to_json %>"
+  data-individualmap-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
 <%# FLAT DETAILS AND BOOKINGS %>
 <div id="flat-altogether" class="d-flex justify-content-between gap-5">
